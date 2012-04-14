@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no" />
+<title>Childbrowser PhoneGap Native App - jQuery Mobile</title>
+<link href="jquery-mobile/jquery.mobile.theme-1.0.min.css" rel="stylesheet" type="text/css"/>
+<link href="jquery-mobile/jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css"/>
+
+<script src="jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+
+<script src="phonegap.js"></script>
+<script src="childbrowser.js"></script>
+
+<script language="text/javascript" type="text/javascript">
+    /**
+* Called when initial web page is loaded
+*/
+    function onBodyLoad()
+    {
+        console.log("onBodyLoad()");
+
+        // Listen for PhoneGap framework to finish init
+        document.addEventListener("deviceready",onDeviceReady,false);
+    }
+
+
+    /**
+* When this function is called, PhoneGap has been initialized and is ready to roll
+*/
+    function onDeviceReady() {
+        console.log("onDeviceReady()");
+    }   
+</script>
+
+</head>
+<body onload="onBodyLoad();">
+<div data-role="page" id="page">
+  <div data-role="header">
+    <h1>ChildBrowser</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="controlgroup"><a href="#" onclick="window.plugins.childBrowser.showWebPage('http://www.google.com',{showLocationBar:true});" data-role="button" data-inline="false">Open Google.com</a></div>
+  </div>
+  <div data-role="footer">
+    <h4>Page Footer</h4>
+  </div>
+</div>
+</body>
+</html>
