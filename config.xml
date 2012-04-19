@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns = "http://www.w3.org/ns/widgets"
     xmlns:gap = "http://phonegap.com/ns/1.0"
-    id        = "com.phonegap.example"
+    id        = "com.childbrowser.phonegap"
     version   = "1.0.0">
 
 <name>ChildBrowser Test App</name>
@@ -13,6 +13,8 @@ A simple PhoneGap Build application that calls the Childbrowser plugin.
 <author href="https://example.com" email="you@example.com">
 Your Name
 </author>
+
+<preference name="phonegap-version" value="1.5.0" />
 
 <!-- To import the native code into your PhoneGap Build project, you will need to add the correct <feature> tag to your config.xml file. Here is the tag for the ChildBrowser plugin: -->
 
